@@ -1,0 +1,169 @@
+<!- Carla Teixeira Fernanda Maria Eduarda Vitória ->
+
+
+  <!DOCTYPE html>
+  <html lang="pt-Br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="background"></div>
+
+    <section class="content">
+
+      <div class="menu">
+        <div class="menu_css">
+          <button onclick="openMenu('css')" id="defaultOpen">CSS</button>
+        </div>
+
+        <div class="menu_especificidade">
+          <button onclick="openMenu('especificidade')">Especificidade</button></a>
+        </div>
+
+        <div class="menu_seletores">
+          <button onclick="openMenu('tipoSeletores')">Tipo de Seletores</button>
+        </div>
+
+        <div class="menu_classes">
+          <button onclick="openMenu('pseudoClass')">Pseudo-Classes</button>
+        </div>
+
+        <div class="menu_elementos">
+          <button onclick="openMenu('pseudoElementos')">Pseudo-Elementos</button>
+        </div>
+
+      </div>
+
+      <div id="css" class="conteudo" style="display: block;">
+
+        <h2>O QUE É CSS? </h2>
+
+        <p>CSS é a sigla para o termo em inglês Cascading Style Sheets que, traduzido para o português, significa Folha de Estilo em Cascatas.</p>
+
+        <p>É a estilização de uma página, e permite que você estilize tudo em um arquivo diferente, criando assim o estilo separadamente e depois faça integração do arquivo CSS na parte superior da marcação HTML.</p>
+
+        É uma boa solução para aprimorar a estética dos sites. Por meio dele, é possível separar formatos de conteúdos e tambem definir como serão exibidos em cada página.</p>
+
+        <p>O CSS é um código em que você pode fazer alterações rápidas de layout, como
+          alterar cores e fontes.
+          Esse código proporciona facilidade de personalização e também ajuda a diminuir a repetição de conteúdo na estrutura do código.
+        </p>
+
+        <p>Ele permite que você estilize tudo em um arquivo diferente, criando assim o estilo separadamente. E só depois faça integração do arquivo CSS na parte superior da marcação HTML. Isso mantém a marcação HTML limpa e fácil de manter.</p>
+      </div>
+
+      <div id="especificidade" class="conteudo">
+        <h2>ESPECIFICIDADE</h2>
+        <p>Especificidade CSS é um tipo de “poder de escolha”, que ajuda os navegadores a decidir qual valor da propriedade CSS terá precedência e será aplicado aos elementos.</p>
+
+        <p>Seletores
+          Primeiramente, vamos entender quais são os seletores mais específicos. Na lista abaixo, os seletores estão ordenados do mais específico ao menos específico.
+        </p>
+
+        <ul>
+          <li>Ids #id { ... }</li>
+          <li>Classes, atributos e pseudo-classes .classe { ... }</li>
+          <li>Elementos e pseudo-elementos div { ... }</li>
+        </ul>
+
+        <p>Para calcular a especificidade do CSS,
+          primeiro escolhemos o seletor e depois calculamos quantas Ids e classes (incluindo pseudo-classes e atributo) e vários elementos existem. Depois de conhecê-los, escrevemos na ordem: abc. </p>
+
+        <p>Nós os comparamos movendo da esquerda para a direita.
+          Assim que encontramos um ponto (a / b / c) maior que o outro, paramos por aí.</p>
+
+        <p>Assim sabemos quem se tornou o vencedor com mais poderes, ou seja, com maior ordem de precedência.</p>
+      </div>
+
+      <div id="tipoSeletores" class="conteudo">
+
+        <h2>TIPO DE SELETORES</h2>
+
+        <p>Seletores: seguinte lista de seletores está incluída na previsão:</p>
+
+        <ul>
+          <li>Seletores Universais</li>
+          <li>Tipo de Seletores</li>
+          <li>Seletores de aulas</li>
+          <li>Atributos Seletores</li>
+          <li>Pseudo-classes</li>
+          <li>ID do seletor</li>
+          <li>Estilo Inline</li>
+        </ul>
+
+      </div>
+
+      <div id="pseudoClass" class="conteudo">
+
+        <h2>SOBRE PSEUDO-CLASSES</h2>
+        <p>Uma pseudo-classe CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado. Por exemplo, :hover pode ser usado para alterar a cor de um botão quando o usuário passar o cursor sobre ele.</P>
+
+        <h4>Pseudo-classes Dinâmicas</h4>
+        <p>As pseudo-classes dinâmicas controlam os estados dos elementos. Abaixo, vão alguns deles:</p>
+
+        <ul>
+          <li>hover: quando passamos o mouse em cima do elemento.</li>
+          <li> active: quando ativamos o elemento. Por exemplo,
+            quando clicamos em um link e não soltamos o botão do mouse.</li>
+          <li>visited: quando o link é visitado.</li>
+          <li>focus: quando um elemento recebe foco. Muito
+            utilizado em campos de texto.</li>
+        </ul>
+
+        <h4>Pseudo-classes Estruturais</h4>
+
+        <p>As pseudo-classes estruturais servem para selecionarmos um elemento da estrutura do código. Existem várias, por exemplo:</p>
+
+        <ul>
+          <li>:first-child: seleciona o primeiro filho de um outro elemento.</li>
+          <li>:last-child: seleciona o último filho de um elemento.</li>
+          <li>:root: representa um elemento que é a raiz do documento. No HTML 4, é sempre a tag HTML.</li>
+          <li>:nth-child(): permite que selecionemos qualquer elemento no meio de um grupo de elementos.</li>
+        </ul>
+
+      </div>
+
+      <div id="pseudoElementos" class="conteudo">
+
+        <h2>SOBRE PSEUDO-ELEMENTOS</h2>
+
+        <p>Um pseudoelemento CSS é uma palavra-chave adicionada a um seletor que permite que você estilize uma parte específica do elemento selecionado. Por exemplo, o pseudoelemento ::first-line aplica o estilo apenas na primeira linha de um parágrafo.</p>
+
+        <h4>Sintaxe</h4>
+
+        <p>Seletor::pseudo-elemento { propriedade: valor; } <br>
+          (Você pode usar apenas um pseudoelemento em um seletor. Ele deverá aparecer depois da declaração de um elemento simples.)</p>
+
+        <h4>Índice de pseudo-elementos comuns</h4>
+        <ul>
+          <li>::after</li>
+          <li>::before</li>
+          <li>::cue (en-US)</li>
+          <li>::first-letter</li>
+          <li>::first-line</li>
+          <li>::selection</li>
+          <li>::slotted (en-US)</li>
+          <li>::slotted (en-US)</li>
+          <li>::backdrop Experimental</li>
+          <li>::placeholder (en-US Experimental)</li>
+          <li>::marker (en-US experimental)</p>
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+
+    <script type="text/javascript" src="js/javascript.js"></script>
+
+  </body>
+
+
+  </html>
